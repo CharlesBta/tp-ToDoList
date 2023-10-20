@@ -111,18 +111,18 @@ int main() {
 
             printf("\n");
             printf("All to do task ->\n");
-            if(afficher_todo(ToDoList) == 0){
-                printf("All task done\n");
-                done = 1;
-            }
+            afficher_todo(ToDoList);
             while(done != 1){
-                printf("ID of task: ");
+                printf("ID of task (-1 to leave): ");
                 scanf("%d",&value_ID);
                 getchar();
                 res = tache_done(ToDoList,value_ID);
                 if(res != 1){
                     done = 1;
                 }else{
+                    if(value_ID == -1){
+                        done = 1;
+                    }
                     printf("Value error, try again\n");
                 }
             }

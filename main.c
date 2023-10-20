@@ -107,7 +107,7 @@ int main() {
         }
         if(menu_value == 5){
             int value_ID = 0;
-            int res,done = 0;
+            int result,done = 0;
 
             printf("\n");
             printf("All to do task ->\n");
@@ -116,8 +116,8 @@ int main() {
                 printf("ID of task (-1 to leave): ");
                 scanf("%d",&value_ID);
                 getchar();
-                res = tache_done(ToDoList,value_ID);
-                if(res != 1){
+                result = tache_done(ToDoList,value_ID);
+                if(result != 1){
                     done = 1;
                 }else{
                     if(value_ID == -1){

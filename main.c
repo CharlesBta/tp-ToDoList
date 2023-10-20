@@ -40,7 +40,6 @@ int afficher_todo(Tache *list){
         }
         return compteur_tache;
     }
-    compteur_tache++;
     afficher_todo(list->next);
     if(list->done != 1){
         printf("%s | id: %d\n",list->note,list->ID);
